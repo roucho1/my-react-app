@@ -1,12 +1,12 @@
 import "./App.css";
+import Counter from "./Component/Counter";
 import Greeting from "./Greeting";
 
 function App() {
   return (
     <div>
       <Greeting name="小明" />
-      <Greeting />
-      <Greeting name="React初學者" />
+      <Counter step={6} />
     </div>
   );
 }
