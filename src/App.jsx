@@ -4,6 +4,7 @@ import FruitList from "./Component/FruitList";
 import Greeting from "./Component/Greeting";
 import LoginForm from "./Component/LoginForm";
 import NameInput from "./Component/NameInput";
+import PostList from "./Component/PostList";
 import TodoList from "./Component/TodoList";
 
 function App() {
@@ -13,8 +14,9 @@ function App() {
       <Counter step={6} />
       <NameInput />
       <LoginForm />
-      <FruitList />*/}
-      <TodoList />
+      <FruitList />
+      <TodoList />*/}
+      <PostList />
     </div>
   );
 }
