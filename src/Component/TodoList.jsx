@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function TodoList() {
   const [todos, setTodos] = useState([]);
@@ -14,6 +14,10 @@ function TodoList() {
   function handleDelete(id) {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
+
+  useEffect(() => {
+    console.log("todos 更新了：", todos);
+  }, [todos]);
 
   return (
     <div>
