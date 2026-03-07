@@ -1,10 +1,8 @@
-function Greeting() {
-  const name = "肉球";
-
+function Greeting({ name: test = "小狗" }) {
+  console.log({ test });
   return (
     <div>
-      <h1>你好，{name}！</h1>
-      <p>這是我的第一個 React component。</p>
+      <h1>你好，{test}！</h1>
     </div>
   );
 }
