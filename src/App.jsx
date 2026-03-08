@@ -1,4 +1,7 @@
+import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./pages/Home";
+import About from "./pages/About";
 import Counter from "./Component/Counter";
 import FruitList from "./Component/FruitList";
 import Greeting from "./Component/Greeting";
@@ -15,8 +18,17 @@ function App() {
       <NameInput />
       <LoginForm />
       <FruitList />
-      <TodoList />*/}
-      <PostList />
+      <TodoList />
+      <PostList />*/}
+      <nav>
+        <Link to="/">首頁</Link>
+        <Link to="/about">關於我</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<h1>404 not fount</h1>} />
+      </Routes>
     </div>
   );
 }
