@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function ContactForm() {
   const [form, setForm] = useState({ name: "", email: "" });
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const navigate = useNavigate();
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -27,8 +29,8 @@ function ContactForm() {
       return;
     }
     setErrors({});
-    setSubmitted(true);
     console.log("送出：", form);
+    navigate("/about"); // 送出成功跳回首頁
   }
 
   if (submitted) return <p>送出成功！</p>;
