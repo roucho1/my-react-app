@@ -10,6 +10,7 @@ import NameInput from "./Component/NameInput";
 import PostList from "./Component/PostList";
 import TodoList from "./Component/TodoList";
 import PostDetail from "./pages/PostDetail";
+import ContactForm from "./pages/ContactForm";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/posts/:id" element={<PostDetail />} />
+        <Route path="/contact" element={<ContactForm />} />
         <Route path="*" element={<h1>404 not fount</h1>} />
       </Routes>
     </div>
