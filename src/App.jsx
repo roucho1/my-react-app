@@ -9,6 +9,7 @@ import LoginForm from "./Component/LoginForm";
 import NameInput from "./Component/NameInput";
 import PostList from "./Component/PostList";
 import TodoList from "./Component/TodoList";
+import PostDetail from "./pages/PostDetail";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/posts/:id" element={<PostDetail />} />
         <Route path="*" element={<h1>404 not fount</h1>} />
       </Routes>
     </div>
