@@ -4,13 +4,14 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { UserContext } from "./context/UserContext.jsx";
+import { ThemeProvider } from "./context/ThemeContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <UserContext.Provider value={{ name: "小明", role: "admin" }}>
+      <ThemeProvider>
         <App />
-      </UserContext.Provider>
+      </ThemeProvider>
     </BrowserRouter>
   </StrictMode>,
 );

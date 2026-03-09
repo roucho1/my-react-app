@@ -2,30 +2,29 @@ import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Counter from "./Component/Counter";
-import FruitList from "./Component/FruitList";
-import Greeting from "./Component/Greeting";
-import LoginForm from "./Component/LoginForm";
-import NameInput from "./Component/NameInput";
-import TodoList from "./Component/TodoList";
 import ContactForm from "./pages/ContactForm";
 import PostDetail from "./pages/PostDetail";
 import PostList from "./pages/PostList";
+import { useContext } from "react";
+import { ThemeContext } from "./context/ThemeContext";
 
 function App() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   return (
-    <div>
-      {/*<Greeting name="小明" />
-      <Counter step={6} />
-      <NameInput />
-      <LoginForm />
-      <FruitList />
-      <TodoList />
-      <PostList />*/}
-      <nav>
+    <div
+      style={{
+        minHeight: "100vh",
+        background: theme === "light" ? "#ffffff" : "#1a1a1a",
+      }}
+    >
+      <nav style={{ color: theme === "light" ? "#000000" : "#ffffff" }}>
         <Link to="/">首頁</Link>
         <Link to="/posts">文章</Link>
         <Link to="/about">關於我</Link>
+        <button onClick={toggleTheme}>
+          {theme === "light" ? "🌙 深色" : "☀️ 淺色"}
+        </button>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
