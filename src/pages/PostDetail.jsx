@@ -1,13 +1,10 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
+import { API_URL } from "../config";
 
 function PostDetail() {
   const { id } = useParams();
-  const {
-    data: post,
-    loading,
-    error,
-  } = useFetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+  const { data: post, loading, error } = useFetch(`${API_URL}/posts/${id}`);
 
   if (loading) return <p className="text-center mt-8">載入中...</p>;
   if (error)

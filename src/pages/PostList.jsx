@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
+import { API_URL } from "../config";
 
 function PostList() {
   const {
     data: posts,
     loading,
     error,
-  } = useFetch("https://jsonplaceholder.typicode.com/posts?_limit=10");
+  } = useFetch(`${API_URL}/posts?_limit=10`);
 
   if (loading) return <p className="text-center mt-8">載入中...</p>;
   if (error)
