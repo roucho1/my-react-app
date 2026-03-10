@@ -20,7 +20,7 @@ function PostList() {
           <Link
             to={`/posts/${post.id}`}
             key={post.id}
-            className="block p-4 border border-gray-200 rounded-lg hover:border-blue-400 hover:shadow transition min-h-[80px] flex items-center justify-center text-center"
+            className="p-4 border border-gray-200 rounded-lg hover:border-blue-400 hover:shadow transition min-h-20 flex items-center justify-center text-center"
           >
             <h2 className="font-semibold mb-1">{post.title}</h2>
           </Link>

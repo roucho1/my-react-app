@@ -32,7 +32,7 @@ function App() {
             color: theme === "dark" ? "#ffffff" : "#111827",
             backgroundColor: theme === "dark" ? "#374151" : "#ffffff",
           }}
-          className={`px-4 py-2 rounded border ${theme === "dark" ? "border-gray-600 hover:!bg-gray-800" : "border-gray-300 hover:!bg-gray-100"}`}
+          className={`px-4 py-2 rounded border ${theme === "dark" ? "border-gray-600 hover:bg-gray-800!" : "border-gray-300 hover:bg-gray-100!"}`}
         >
           {theme === "light" ? "🌙 深色" : "☀️ 淺色"}
         </button>
