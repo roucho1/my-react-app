@@ -6,19 +6,19 @@ function useFetch(url) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(url)
-      .then((res) => {
+    async function fetchData() {
+      try {
+        const res = await fetch(url);
         if (!res.ok) throw new Error("API 請求失敗");
-        return res.json();
-      })
-      .then((data) => {
+        const data = await res.json();
         setData(data);
-        setLoading(false);
-      })
-      .catch((err) => {
+      } catch (err) {
         setError(err.message); // 錯誤在這裡被接住
-        setLoading(false); // 記得把 loading 關掉
-      });
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchData();
   }, [url]);
 
   return { data, loading, error };
