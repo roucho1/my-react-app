@@ -6,8 +6,8 @@ import { ThemeContext } from "../context/ThemeContext";
 function About() {
   const { theme } = useContext(ThemeContext);
   return (
-    <div style={{ color: theme === "light" ? "#000000" : "#ffffff" }}>
-      <h1>關於我</h1>
+    <div className="font-bold text-sm p-32 bg-gray-700 flex ">
+      <h1 className="text-gray-300">關於我</h1>
     </div>
   );
 }
