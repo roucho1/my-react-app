@@ -1,16 +1,40 @@
-# React + Vite
+# my-react-app
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+使用 React及Vite 建立的學習demo畫面。
 
-Currently, two official plugins are available:
+## 技術棧
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- Vite
+- Javascript
+- React Router
+- Tailwind CSS
 
-## React Compiler
+## 本機啟動
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+```bash
+# 安裝套件
+npm install
 
-## Expanding the ESLint configuration
+# 啟動伺服器
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 線上網址
+
+https://my-react-app-murex-seven.vercel.app/
+
+## 頁面路由
+
+| 路徑        | 說明     |
+| ----------- | -------- |
+| /           | 首頁     |
+| /about      | 關於我   |
+| /posts      | 文章列表 |
+| /posts/[id] | 文章詳情 |
+
+## 環境變數.env
+
+| 變數名稱     | 說明                                                      |
+| ------------ | --------------------------------------------------------- |
+| VITE_API_URL | API 的 domain(練習中使用了jsonplaceholder的假資料測試API) |
